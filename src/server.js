@@ -7,3 +7,5 @@ import fastify from './index';
     console.log(err);
   }
 })();
+
+
