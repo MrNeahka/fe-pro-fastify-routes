@@ -50,6 +50,9 @@ fastify.get('/users', (request, reply) => {
   }
 
   const result = Object.values(users).filter((item) => {
+    if (filter === 'age'){
+      return  item[`${filter}`] === +value;
+    }
      return  item[`${filter}`] === value;
   })
   return reply.send(result);
